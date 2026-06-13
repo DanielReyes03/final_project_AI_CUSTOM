@@ -17,7 +17,7 @@
       <section class="workspace">
         <form id="ask-form" class="card ask-card">
           <label for="user-id">Usuario</label>
-          <input id="user-id" name="user_id" value="student-01" />
+          <input id="user-id" name="user_id" value="demo_user" />
 
           <label for="question">Pregunta</label>
           <textarea id="question" name="question" rows="5" placeholder="Pregunta sobre RAG, CAG, SDD, BDD o TDD"></textarea>
@@ -27,14 +27,30 @@
 
         <aside class="card context-card">
           <p class="panel-label">Panel CAG</p>
-          <h2>Contexto pendiente</h2>
-          <p>Este panel es un punto de partida. Debe mostrar contexto guardado cuando implementes <code>/api/context</code>.</p>
-          <pre id="context-output">Sin contexto cargado.</pre>
+          <h2>Mi Contexto Guardado</h2>
+
+          <div id="context-list" class="context-list">
+            <p class="context-empty">Sin contexto cargado.</p>
+          </div>
+
+          <form id="save-context-form" class="save-context-form">
+            <label for="ctx-key">Clave</label>
+            <input id="ctx-key" name="key" placeholder="ej: audience" autocomplete="off" />
+
+            <label for="ctx-value">Valor</label>
+            <input id="ctx-value" name="value" placeholder="ej: explicar como principiante" autocomplete="off" />
+
+            <button type="submit" class="btn-secondary">Guardar Contexto</button>
+          </form>
         </aside>
       </section>
 
       <section class="card response-card">
         <p class="panel-label">Respuesta</p>
+        <div id="context-used-banner" class="context-used-banner hidden">
+          <span class="badge-used">&#10003; Respuesta enriquecida con contexto CAG</span>
+          <span id="context-used-keys" class="context-used-keys"></span>
+        </div>
         <pre id="answer-output">Todavia no hiciste una pregunta.</pre>
       </section>
     </main>
