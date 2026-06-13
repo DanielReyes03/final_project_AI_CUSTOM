@@ -2,6 +2,8 @@
 
 Asistente conversacional universitario que combina **RAG** (Retrieval-Augmented Generation) para responder desde una base de conocimiento del curso, con **CAG** (Context-Augmented Generation) para adaptar las respuestas según el contexto y preferencias acumuladas de cada usuario. El sistema expone una API REST en Python puro (sin frameworks) y una interfaz web en HTML/JS vanilla que permite hacer preguntas y gestionar el contexto de forma interactiva.
 
+![CAG Lab - Interfaz principal](docs/evidencias/prueba-frontend.png)
+
 ---
 
 ## Arquitectura
@@ -78,6 +80,10 @@ El servidor crea una única instancia al arrancar y la comparte con todos los ha
 - **Sin contexto** (`context_items` vacío o `None`): retorna `base_answer` sin modificar, `context_used: []`.
 - **Con contexto**: construye una respuesta enriquecida que incluye el texto original seguido de los pares `key: value` del contexto, garantizando que los valores del usuario aparecen literalmente en la respuesta. Retorna `{"answer": ..., "context_used": [keys...]}`.
 
+**CAG en acción — formulario de contexto y respuesta adaptada:**
+
+![CAG Lab - Módulo de contexto activo](docs/evidencias/pruebas-cag-contexto.png)
+
 ### `backend/assistant.py` — Integración del pipeline completo
 
 `answer_question` orquesta el flujo end-to-end:
@@ -136,6 +142,18 @@ PYTHONPATH=. python3 -m pytest tests/ -v
 
 **Resultado esperado:** `16 passed` sin errores ni warnings.
 
+### Pruebas base — `tests/base/` (3 tests)
+
+![Pruebas base pasando](docs/evidencias/pruebas-sprint%231.png)
+
+### Pruebas de contrato CAG — `tests/validation/` (3 tests)
+
+![Pruebas contrato CAG pasando](docs/evidencias/pruebas-sprint%232.1.png)
+
+### Suite completa — 16 tests
+
+![Suite completa 16 tests pasando](docs/evidencias/pruebas-sprint%233.png)
+
 ---
 
 ## Metodología Scrum
@@ -148,6 +166,10 @@ El proyecto se desarrolló en sprints semanales siguiendo la metodología Scrum.
 | **Sprint 2** | Implementar módulo CAG completo: ContextStore, apply_context e integración en assistant | US-01, US-02 | Completado |
 | **Sprint 3** | Pruebas BDD para el flujo CAG completo | US-03 | Planificado |
 | **Sprint 4** | Mejoras de UX y cierre del proyecto | — | Planificado |
+
+**Cierre del Sprint 2 — 6/6 tests pasando sin regresiones:**
+
+![Sprint 2 completado - 6/6 tests](docs/evidencias/pruebas-sprint%232.png)
 
 ### Product Backlog (resumen)
 
@@ -215,10 +237,12 @@ final_project_AI_CUSTOM/
 
 ## Evidencias
 
-Las capturas de pantalla, evidencias de ejecución de pruebas y registros visuales del funcionamiento del sistema se encuentran en `docs/evidencias/`.
+Capturas de pantalla del funcionamiento del sistema almacenadas en `docs/evidencias/`.
 
-Se recomienda incluir al menos:
+### Verificación inicial del proyecto base
 
-- Captura del frontend con una respuesta enriquecida (badge CAG visible)
-- Output de terminal con `16 passed` al ejecutar la suite completa
-- Captura del panel "Mi Contexto Guardado" con pares cargados
+![Verificación inicial - pruebas previas](docs/evidencias/pruebas-previas.png)
+
+### Suite final completa — 16/16 tests
+
+![Suite final 16 tests](docs/evidencias/pruebas-sprint%234.png)
