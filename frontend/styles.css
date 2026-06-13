@@ -6,6 +6,8 @@
   --accent: #e4572e;
   --accent-dark: #9d321a;
   --line: #1f293326;
+  --green: #2d7a4f;
+  --green-bg: #edf7f1;
 }
 
 * {
@@ -122,6 +124,108 @@ pre {
 
 .response-card {
   margin-top: 20px;
+}
+
+/* ── Context list ─────────────────────────────── */
+
+.context-list {
+  margin: 14px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.context-empty {
+  margin: 0;
+  color: var(--muted);
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.context-item {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  background: #161b2210;
+  border-radius: 12px;
+  padding: 10px 14px;
+}
+
+.context-item-key {
+  font-family: "Courier New", monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent-dark);
+  white-space: nowrap;
+}
+
+.context-item-value {
+  font-size: 0.88rem;
+  color: var(--ink);
+  word-break: break-word;
+}
+
+/* ── Save context form ────────────────────────── */
+
+.save-context-form {
+  margin-top: 20px;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+}
+
+.save-context-form input {
+  padding: 10px 14px;
+  font-size: 0.9rem;
+}
+
+.btn-secondary {
+  background: var(--accent);
+  font-size: 0.85rem;
+  padding: 10px 14px;
+}
+
+.btn-secondary:hover {
+  background: var(--accent-dark);
+}
+
+/* ── Context-used banner ──────────────────────── */
+
+.context-used-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  background: var(--green-bg);
+  border: 1px solid #b2dac4;
+  border-radius: 12px;
+  padding: 10px 16px;
+  margin-bottom: 8px;
+}
+
+.context-used-banner.hidden {
+  display: none;
+}
+
+.badge-used {
+  font-family: "Courier New", monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--green);
+}
+
+.context-used-keys {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.context-used-keys .key-tag {
+  background: var(--green);
+  color: white;
+  border-radius: 999px;
+  padding: 2px 10px;
+  font-family: "Courier New", monospace;
+  font-size: 0.75rem;
 }
 
 @media (max-width: 780px) {
