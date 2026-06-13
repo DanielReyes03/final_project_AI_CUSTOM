@@ -2,7 +2,7 @@
 
 **Proyecto:** Sistema CAG con Memoria Contextual  
 **Fecha:** 2026-06-12  
-**Equipo:** Daniel Reyes
+**Equipo:** Fredy Reyes
 
 ---
 

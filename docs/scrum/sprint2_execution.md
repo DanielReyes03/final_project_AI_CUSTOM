@@ -3,7 +3,7 @@
 **Proyecto:** Sistema CAG con Memoria Contextual  
 **Sprint objetivo:** Implementar módulo CAG completo: ContextStore, apply_context e integración en assistant  
 **Fecha:** 2026-06-12  
-**Equipo:** Daniel Reyes
+**Equipo:** Fredy Reyes
 
 ---
 

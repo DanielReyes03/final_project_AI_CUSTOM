@@ -2,7 +2,7 @@
 
 **Proyecto:** Sistema CAG con Memoria Contextual  
 **Duración:** 1 semana  
-**Equipo:** Daniel Reyes  
+**Equipo:** Fredy Reyes  
 **Fecha:** 2026-06-12
 
 ---

@@ -3,7 +3,7 @@
 **Proyecto:** Sistema CAG con Memoria Contextual  
 **Sprint objetivo:** Verificar base del proyecto e implementar ContextStore funcional  
 **Fechas:** [FECHA INICIO] → [FECHA FIN]  
-**Equipo:** Daniel Reyes
+**Equipo:** Fredy Reyes
 
 ---
 
@@ -184,8 +184,8 @@ Actualiza el estado de cada tarea a medida que avanzas.
 
 | Acción | Responsable | Fecha límite |
 |---|---|---|
-| [Completar] | Daniel Reyes | [Completar] |
-| [Completar] | Daniel Reyes | [Completar] |
+| [Completar] | Fredy Reyes | [Completar] |
+| [Completar] | Fredy Reyes | [Completar] |
 
 ---
 

@@ -1,5 +1,7 @@
 # CAG Lab — Sistema RAG + CAG con Memoria Contextual
 
+**Estudiante:** Fredy Reyes | **Carnet:** 090-22-9800
+
 Asistente conversacional universitario que combina **RAG** (Retrieval-Augmented Generation) para responder desde una base de conocimiento del curso, con **CAG** (Context-Augmented Generation) para adaptar las respuestas según el contexto y preferencias acumuladas de cada usuario. El sistema expone una API REST en Python puro (sin frameworks) y una interfaz web en HTML/JS vanilla que permite hacer preguntas y gestionar el contexto de forma interactiva.
 
 ![CAG Lab - Interfaz principal](docs/evidencias/prueba-frontend.png)

@@ -1,7 +1,7 @@
 # Product Backlog
 
 **Proyecto:** Sistema CAG con Memoria Contextual  
-**Equipo:** Daniel Reyes  
+**Estudiante:** Fredy Reyes | **Carnet:** 090-22-9800  
 **Última actualización:** 2026-06-12
 
 ---
